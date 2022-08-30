@@ -1,0 +1,15 @@
+@import './variable';
+:host{
+    display: block;
+}
+.c-text {
+  color: $text-text-color;
+  font-size: $text-font-size;
+}
+
+.forwarded{
+    color: $text-text-color;
+}
+.edited{
+    color: $text-text-edited;
+}

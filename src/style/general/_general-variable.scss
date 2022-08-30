@@ -1,0 +1,25 @@
+@import '../brand/brand-variable.scss';
+//define general variable like main-80 primary-90
+//naming convention --global--concept--modifier--state--PropertyCamelCase
+// you can define Common variable just in :root section
+:root {
+  --primary-color: var(--color-brand-pink);
+  --secondary-color: #536390;
+  --font-color: #000000;
+  --bg-color: yellow;
+  --heading-color: #292922;
+  --font-size: 2rem;
+  --text-edited: #818cab;
+  --global--BackgroundColor:#f5f5f5;
+  --global--margin--bottom: 1.5rem
+}
+
+:root.dark {
+  --primary-color: var(--color-brand-green);
+  --secondary-color: #818cab;
+  --font-color: rgb(67, 65, 80);
+  --bg-color: green;
+  --heading-color: #818cab;
+  --font-size: 3rem;
+  --global--BackgroundColor:#cacaca;
+}

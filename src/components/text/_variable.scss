@@ -1,0 +1,5 @@
+@use '../../style/general/general-variable.scss' as *;
+
+$text-text-color: var(--font-color, purple);
+$text-font-size: var(--font-size, 2rem);
+$text-text-edited: var(--text-edited,red);

@@ -1,0 +1,7 @@
+@use '../../style/general/general-variable.scss' as *;
+// naming convention : --block__element--modifier--state--PropertyCamelCase
+// don't forget to define fallback state for variables.
+$button-background-color: var(--primary-color);
+$button-text-color: var(--font-color, purple);
+$button-font-size: var(--font-size, 2rem);
+$button-margin: var(--margin--bottom, 2rem);

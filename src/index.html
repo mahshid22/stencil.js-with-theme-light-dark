@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <script type="module" src="/build/theme.esm.js"></script>
+    <link rel="stylesheet" href="/build/theme.css" />
+    <script nomodule src="/build/theme.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+      </div>
+    </nav>
+    <section>
+      <article class="post">
+        <hr/>
+        <h1>The Principles of Good Design</h1>
+        <wow-text>some random text</wow-text>
+        <wow-text mood="edited">edited text</wow-text>
+
+        <wow-button>ButtonFace</wow-button>
+
+        <a href="#">Read More</a>
+      </article>
+    </section>
+  </body>
+  <script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        document.documentElement.className = 'dark';
+      }
+    }
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.className = 'dark';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        document.documentElement.className = 'light';
+      }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
+</html>

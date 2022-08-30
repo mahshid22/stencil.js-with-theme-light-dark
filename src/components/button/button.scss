@@ -1,0 +1,14 @@
+@import './variable';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+:host{
+  display: block;
+  margin-bottom: $button-margin;
+}
+.c-btn {
+  font-family: 'Lato', sans-serif;
+  background-color: $button-background-color;
+  color: $button-text-color;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: $button-font-size;
+}
